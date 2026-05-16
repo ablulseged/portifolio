@@ -1,0 +1,5 @@
+/* App specific styles can go here if needed, but Tailwind is preferred */
+.gradient-bg {
+  background: radial-gradient(circle at top right, rgba(139, 92, 246, 0.15), transparent),
+              radial-gradient(circle at bottom left, rgba(79, 70, 229, 0.15), transparent);
+}
