@@ -1,5 +1,5 @@
 import React from 'react';
-import { Github, Linkedin, Mail, Twitter, ArrowUp } from 'lucide-react';
+import { Github, Mail, ArrowUp } from 'lucide-react';
 
 const Footer = () => {
   const scrollToTop = () => {
@@ -7,34 +7,39 @@ const Footer = () => {
   };
 
   return (
-    <footer className="pt-32 pb-12 border-t border-gray-200 dark:border-white/5 lg:ml-32 transition-colors duration-300">
+    <footer className="pt-32 pb-12 border-t border-gray-200 lg:ml-32">
       <div className="max-w-7xl mx-auto px-4 md:px-12">
         <div className="flex flex-col md:flex-row justify-between items-start gap-16 mb-24">
           <div className="max-w-md">
-            <h2 className="text-4xl font-black tracking-tighter mb-8 text-gray-900 dark:text-white">DANIEL.DEV</h2>
-            <p className="text-gray-600 dark:text-gray-500 leading-relaxed mb-8 text-lg">
+            <h2 className="text-4xl font-black tracking-tighter mb-8 text-gray-900">DANIEL.DEV</h2>
+            <p className="text-gray-600 leading-relaxed mb-8 text-lg">
               Crafting high-end digital solutions for visionary brands. Let's build something extraordinary together.
             </p>
             <div className="flex gap-4">
-              {[Github, Linkedin, Mail, Twitter].map((Icon, i) => (
-                <a 
-                  key={i} 
-                  href="#" 
-                  className="p-4 glass rounded-2xl text-gray-500 hover:text-primary-600 transition-all"
-                >
-                  <Icon className="w-5 h-5" />
-                </a>
-              ))}
+              <a
+                href="https://github.com/ablulseged/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-4 glass rounded-2xl text-gray-500 hover:text-primary-600 transition-all"
+              >
+                <Github className="w-5 h-5" />
+              </a>
+              <a
+                href="mailto:daniellulseged79@gmail.com"
+                className="p-4 glass rounded-2xl text-gray-500 hover:text-primary-600 transition-all"
+              >
+                <Mail className="w-5 h-5" />
+              </a>
             </div>
           </div>
           
           <div className="grid grid-cols-2 gap-20">
             <div>
-              <h4 className="text-sm font-bold uppercase tracking-widest text-gray-900 dark:text-white mb-8">Navigation</h4>
+              <h4 className="text-sm font-bold uppercase tracking-widest text-gray-900 mb-8">Navigation</h4>
               <ul className="space-y-4">
                 {['About', 'Skills', 'Projects', 'Services', 'Contact'].map(link => (
                   <li key={link}>
-                    <a href={`#${link.toLowerCase()}`} className="text-gray-600 dark:text-gray-500 hover:text-primary-600 transition-colors">
+                    <a href={`#${link.toLowerCase()}`} className="text-gray-600 hover:text-primary-600 transition-colors">
                       {link}
                     </a>
                   </li>
@@ -42,17 +47,17 @@ const Footer = () => {
               </ul>
             </div>
             <div>
-              <h4 className="text-sm font-bold uppercase tracking-widest text-gray-900 dark:text-white mb-8">Contact</h4>
-              <ul className="space-y-4 text-gray-600 dark:text-gray-500">
-                <li>Hossana, Ethiopia</li>
-                <li>+251 900 000 000</li>
-                <li>daniel@example.com</li>
+              <h4 className="text-sm font-bold uppercase tracking-widest text-gray-900 mb-8">Contact</h4>
+              <ul className="space-y-4 text-gray-600">
+                <li>Addis Ababa, Ethiopia</li>
+                <li>+251 938 676 967</li>
+                <li>daniellulseged79@gmail.com</li>
               </ul>
             </div>
           </div>
         </div>
         
-        <div className="pt-12 border-t border-gray-200 dark:border-white/5 flex flex-col md:flex-row justify-between items-center gap-8">
+        <div className="pt-12 border-t border-gray-200 flex flex-col md:flex-row justify-between items-center gap-8">
           <p className="text-gray-500 text-sm">
             © {new Date().getFullYear()} DANIEL.DEV. ALL RIGHTS RESERVED.
           </p>

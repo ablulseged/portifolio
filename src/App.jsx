@@ -12,13 +12,12 @@ import Footer from './components/Footer';
 function App() {
   useEffect(() => {
     document.documentElement.style.scrollBehavior = 'smooth';
+    // Ensure dark class is never applied
+    document.documentElement.classList.remove('dark');
   }, []);
 
   return (
-    <div className="bg-transparent dark:bg-transparent selection:bg-primary-500 selection:text-white transition-colors duration-300">
-      {/* Global Grainy Overlay */}
-      <div className="fixed inset-0 pointer-events-none opacity-[0.03] z-[9999] bg-[url('https://grainy-gradients.vercel.app/noise.svg')] dark:invert" />
-      
+    <div className="bg-white selection:bg-primary-500 selection:text-white">
       <Navbar />
       <main className="lg:pl-32">
         <Hero />
